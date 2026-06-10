@@ -1,34 +1,95 @@
-# 环境变量和密钥
-*.env
-*.key
-*.pem
-config.ini
-secret.py
+# =========================
+# Local scripts / Claude
+# =========================
+**/datastart_claude.local.sh
+**/start_claude.sh
+**/.claude/
 
-# 数据集和模型权重
-data/
-model/
-weights/
-checkpoints/
+# =========================
+# Secrets / private configs
+# =========================
+**/*.env
+**/*.key
+**/*.pem
+**/config.ini
+**/secret.py
 
-# 日志和临时文件
-log/
-logs/
-tmp/
-*.out
-*.err
+# =========================
+# Data / generated datasets
+# Applies to all subprojects
+# =========================
+**/data/
+**/datasets/
+**/raw_data/
+**/processed_data/
 
-# Python 缓存
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# =========================
+# Model weights / checkpoints
+# 注意：不忽略 **/model/，避免误删源码目录
+# =========================
+**/weights/
+**/checkpoints/
+**/saved_models/
+**/models_saved/
+**/new_model/
 
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.bin
+**/*.safetensors
+
+# =========================
+# Embeddings / large generated arrays
+# =========================
+**/*.pkl
+**/*.npy
+**/*.npz
+
+# =========================
+# Logs / outputs / temp files
+# =========================
+**/log/
+**/logs/
+**/new_log/
+**/tmp/
+**/outputs/
+**/results/
+**/runs/
+**/wandb/
+
+**/*.out
+**/*.err
+**/*.log
+
+# =========================
+# Python cache
+# =========================
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# =========================
+# Virtual environments
+# =========================
+**/.venv/
+**/venv/
+**/env/
+**/.env/
+
+# =========================
 # IDE
-.vscode/
-.idea/
-*.swp
+# =========================
+**/.vscode/
+**/.idea/
+**/*.swp
 
-# 本地启动脚本
-datastart_claude.local.sh
-start_claude.sh
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
