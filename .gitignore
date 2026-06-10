@@ -1,0 +1,34 @@
+# 环境变量和密钥
+*.env
+*.key
+*.pem
+config.ini
+secret.py
+
+# 数据集和模型权重
+data/
+model/
+weights/
+checkpoints/
+
+# 日志和临时文件
+log/
+logs/
+tmp/
+*.out
+*.err
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 本地启动脚本
+datastart_claude.local.sh
+start_claude.sh
